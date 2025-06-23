@@ -1,0 +1,147 @@
+$carousel-control-color:             $white;
+$carousel-control-width:             15%;
+$carousel-control-opacity:           .5;
+$carousel-control-hover-opacity:     .9;
+$carousel-control-transition:        opacity .15s ease;
+$carousel-control-icon-filter:       null;
+
+$carousel-indicator-width:           30px;
+$carousel-indicator-height:          3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .5;
+$carousel-indicator-active-bg:       $white;
+$carousel-indicator-active-opacity:  1;
+$carousel-indicator-transition:      opacity .6s ease;
+
+$carousel-caption-width:             70%;
+$carousel-caption-color:             $white;
+$carousel-caption-padding-y:         1.25rem;
+$carousel-caption-spacer:            1.25rem;
+
+$carousel-control-icon-width:        2rem;
+
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>");
+
+$carousel-transition-duration:       .6s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+$dropdown-min-width:                10rem;
+$dropdown-padding-x:                0;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .125rem;
+$dropdown-font-size:                $font-size-base;
+$dropdown-color:                    var(--#{$prefix}body-color);
+$dropdown-bg:                       var(--#{$prefix}body-bg);
+$dropdown-border-color:             var(--#{$prefix}border-color-translucent);
+$dropdown-border-radius:            var(--#{$prefix}border-radius);
+$dropdown-border-width:             var(--#{$prefix}border-width);
+$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}); // stylelint-disable-line function-disallowed-list
+$dropdown-divider-bg:               $dropdown-border-color;
+$dropdown-divider-margin-y:         $spacer * .5;
+$dropdown-box-shadow:               var(--#{$prefix}box-shadow);
+
+$dropdown-link-color:               var(--#{$prefix}body-color);
+$dropdown-link-hover-color:         $dropdown-link-color;
+$dropdown-link-hover-bg:            var(--#{$prefix}tertiary-bg);
+
+$dropdown-link-active-color:        $component-active-color;
+$dropdown-link-active-bg:           $component-active-bg;
+
+$dropdown-link-disabled-color:      var(--#{$prefix}tertiary-color);
+
+$dropdown-item-padding-y:           $spacer * .25;
+$dropdown-item-padding-x:           $spacer;
+
+$dropdown-header-color:             $gray-600;
+$dropdown-header-padding-x:         $dropdown-item-padding-x;
+$dropdown-header-padding-y:         $dropdown-padding-y;
+// fusv-disable
+$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x; // Deprecated in v5.2.0
+// fusv-enable
+
+$dropdown-dark-color:               $gray-300;
+$dropdown-dark-bg:                  $gray-800;
+$dropdown-dark-border-color:        $dropdown-border-color;
+$dropdown-dark-divider-bg:          $dropdown-divider-bg;
+$dropdown-dark-box-shadow:          null;
+$dropdown-dark-link-color:          $dropdown-dark-color;
+$dropdown-dark-link-hover-color:    $white;
+$dropdown-dark-link-hover-bg:       rgba($white, .15);
+$dropdown-dark-link-active-color:   $dropdown-link-active-color;
+$dropdown-dark-link-active-bg:      $dropdown-link-active-bg;
+$dropdown-dark-link-disabled-color: $gray-500;
+$dropdown-dark-header-color:        $gray-500;
+
+$caret-width:                 .3em;
+$caret-vertical-align:        $caret-width * .85;
+$caret-spacing:               $caret-width * .85;
+
+@mixin caret-down($width: $caret-width) {
+  border-top: $width solid;
+  border-right: $width solid transparent;
+  border-bottom: 0;
+  border-left: $width solid transparent;
+}
+
+@mixin caret-up($width: $caret-width) {
+  border-top: 0;
+  border-right: $width solid transparent;
+  border-bottom: $width solid;
+  border-left: $width solid transparent;
+}
+
+@mixin caret-end($width: $caret-width) {
+  border-top: $width solid transparent;
+  border-right: 0;
+  border-bottom: $width solid transparent;
+  border-left: $width solid;
+}
+
+@mixin caret-start($width: $caret-width) {
+  border-top: $width solid transparent;
+  border-right: $width solid;
+  border-bottom: $width solid transparent;
+}
+
+@mixin caret(
+  $direction: down,
+  $width: $caret-width,
+  $spacing: $caret-spacing,
+  $vertical-align: $caret-vertical-align
+) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+      margin-left: $spacing;
+      vertical-align: $vertical-align;
+      content: "";
+      @if $direction == down {
+        @include caret-down($width);
+      } @else if $direction == up {
+        @include caret-up($width);
+      } @else if $direction == end {
+        @include caret-end($width);
+      }
+    }
+
+    @if $direction == start {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $spacing;
+        vertical-align: $vertical-align;
+        content: "";
+        @include caret-start($width);
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}

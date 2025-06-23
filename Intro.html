@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom_features.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-" data-bs-theme="dark" style="background-color: palevioletred;">
+        
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i>TechiePosts</i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" aria-current="page" href="Index.html"><div class="hey">Home</div></a>
+         <a class="nav-link active" href="#"><div class="hey">Intro</div></a>
+        <a class="nav-link" href="Features.html"><div class="hey">Features</div></a>
+        <a class="nav-link" href="Application.html"><div class="hey">Applications</div></a>
+        <a class="nav-link logins" id="loginBtn" ><div class="hey">Log In</div></a>
+      </div>
+      <form id="searchForm" class="d-flex ms-auto" role="search">
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="searchBtn" class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div id="content">
+<h1><span class="pink">What Exactly is </span>Swarm Intelligence ?</h1>
+<div class="subhead"><i>Exploring and understanding SI in Distributed Systems ..</i></div>
+<br><br>
+<img class="imgee" src="FeatureImg/swarm-openai-venkys-ai-the-school-of-ai.png" alt="">
+<br>
+<br>
+<p class="pinkout">
+    Have you ever watched a flock of birds flying together, changing direction in perfect harmony, or seen a group of ants working as a team to find food and bring it back to their nest? These are just a couple of examples of how groups in nature seem to act as one, even though each member is just following simple rules.<br><br>
+
+Swarm AI (or Swarm Intelligence) is a field of artificial intelligence that tries to understand and copy this kind of group behavior. The main idea is that a large number of simple individuals—like birds, ants, or even tiny robots—can work together to solve problems, even if each one isn’t very smart on its own. There’s no single leader telling everyone what to do. Instead, each member of the group makes decisions based on what’s happening around it, and the whole group ends up acting in a smart and organized way.
+Researchers got interested in Swarm AI because they noticed that these natural groups can do things that are hard for even the most powerful computers. For example, ants can find the shortest path to food, or fish can move together to avoid predators, all without anyone being “in charge.” Scientists wanted to know how this works, and whether we could use the same ideas to solve problems in our own world.
+<br>
+Swarm AI is a bit like a team sport, where every player pays attention to what’s happening nearby and makes quick decisions, but there’s no coach on the field. When everyone follows a few simple rules, the team as a whole can do amazing things—sometimes better than a single expert could do alone.
+<br><br>
+People study Swarm AI not only to understand nature better, but also to find new ways to build computer programs, robots, and systems that can work together, adapt to changes, and solve tough problems. It’s a way of thinking that shows how simple parts, when put together, can create something much greater than the sum of their parts.
+So, if you’re curious about how groups in nature seem so smart, and how we might use those secrets to make our technology better, Swarm AI is the field to explore. It’s all about teamwork, simple rules, and the surprising power of working together.
+
+
+</p>       
+
+<h1><span class="pink">How is Swarm AI  </span>different from traditional AI ?</h1>
+<p class="pinkout">
+    When most people think of artificial intelligence, they imagine powerful computers or robots making decisions based on huge amounts of data and complex programming. This is how traditional AI works: a single system or program tries to “think” and solve problems, often using a central brain or controller.
+Swarm AI, however, takes a very different approach. Instead of relying on one super-smart machine, Swarm AI is all about teamwork. It uses many simple agents—like tiny robots, software programs, or even sensors—that each follow a few basic rules and interact with their nearby neighbors. There is no single leader or master plan. Instead, the group’s intelligence comes from the way all the agents work together.
+This difference makes Swarm AI especially good at handling situations where things are always changing, or where it’s hard to predict what will happen next. If one agent fails or gets lost, the rest can keep going without any trouble. The system doesn’t break down just because one part isn’t working. In fact, sometimes the group can even adapt and find new solutions on the fly!
+<br><br>
+By focusing on collaboration and local decision-making, Swarm AI can solve problems that would be too complicated or unpredictable for traditional AI. It’s a bit like the difference between a single chess grandmaster and a whole team of people each making their own moves, but somehow still working together to win the game.
+
+Swarm AI shows us that sometimes, the smartest solutions come not from one brilliant mind, but from the simple actions of many working together.
+</p>
+
+
+
+<a href="Index.html" class="card-btn">Back to Home</a>
+<br><br>
+<div class="subhead"><span class="pink"><i>Welcome to Swarm AI—a world where simple things join forces to do something extraordinary!</i></span></div>
+
+<div class="div">
+  <footer>
+    <div class="foot">TechiePosts | Hyderabad | India | 500049 </div>
+  </footer>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Store the original HTML content when the page loads
+    const content = document.getElementById('content');
+    const originalHTML = content.innerHTML;
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const searchTerm = document.getElementById('searchInput').value.trim();
+
+      // Reset content to original HTML (removes all highlights)
+      content.innerHTML = originalHTML;
+
+      if (!searchTerm) return;
+
+      // Escape special regex characters in the search term
+      const safeTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(safeTerm, 'gi');
+
+      // Highlight all occurrences of the search term
+      content.innerHTML = content.innerHTML.replace(regex, function(match) {
+        return `<mark>${match}</mark>`;
+      });
+    });
+
+    document.getElementById('loginBtn').addEventListener('click', function() {
+  const clientId = 'YOUR_CLIENT_ID';
+  const redirectUri = encodeURIComponent('YOUR_REDIRECT_URI');
+  const state = Math.random().toString(36).substring(2); // simple random state
+  const scope = encodeURIComponent('openid email');
+  const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&state=${state}`;
+  window.location.href = authUrl;
+});
+
+  </script>
+</body>
+</html>

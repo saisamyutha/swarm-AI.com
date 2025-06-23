@@ -1,0 +1,57 @@
+<style>
+  .calendar {
+    width: 220px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    box-shadow: 0 2px 8px #eee;
+  }
+  .calendar th, .calendar td {
+    border: 1px solid #ccc;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 4px;
+  }
+  .calendar th {
+    background: #f8b6d4;
+    color: #fff;
+  }
+  .calendar .today {
+    background: palevioletred;
+    color: #fff;
+    border-radius: 50%;
+  }
+</style>
+
+<table class="calendar">
+  <caption><strong>June 2025</strong></caption>
+  <thead>
+    <tr>
+      <th>Mo</th>
+      <th>Tu</th>
+      <th>We</th>
+      <th>Th</th>
+      <th>Fr</th>
+      <th>Sa</th>
+      <th>Su</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+    </tr>
+    <tr>
+      <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+    </tr>
+    <tr>
+      <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+    </tr>
+    <tr>
+      <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+    </tr>
+    <tr>
+      <td>24</td><td class="today">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,200 @@
+.navbar-brand{
+    font-family: "Jost", sans-serif;
+    font-weight: bolder;
+    
+}
+
+.hey{
+    padding-left: 138px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar navbar-expand-lg sticky-top bg-primary{
+   background-color: palevioletred !important;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.pink{
+    color: palevioletred;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.subhead{
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card {
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(255,255,255,0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 350px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.card h2 {
+  color: palevioletred;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.card p {
+  color: #fff;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.card-btn {
+  display: inline-block;
+  background: palevioletred;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.12);
+  margin-top: auto;
+}
+
+.card-btn:hover {
+  background: #fff;
+  color: palevioletred;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  /* To match the card's height */
+  height: 100%;
+}
+
+.img-container img {
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(255,255,255,0.18);
+  height: 100%;
+  max-height: 350px; /* Matches the card's max height */
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Make the image always match the card's height */
+.main-container {
+  align-items: stretch;
+}
+
+.card, .img-container {
+  flex: 0 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .img-container img {
+    max-width: 90vw;
+    max-height: 300px;
+  }
+}
+
+.background{
+    padding-left: 15%;
+    padding-top: 70px;
+    display: flex;
+}
+
+.Pic1{
+  max-height: 300px;  
+  padding-left: 220px;
+  padding-top: 20px;
+  
+}
+.card:hover {
+      box-shadow: 0 16px 48px 0 rgba(255,255,255,0.35), 0 2px 8px 0 palevioletred;
+      transform: translateY(-8px) scale(1.03);
+    }
+
+    .pic2{
+        padding-left: 85px;
+        padding-top: 20px;
+        padding-left: 100px;
+    }
+
+    .pic3{
+        padding-top: 20px;
+        padding-left: 50px;
+        max-height: 500px;
+    }
+
+    footer{
+        background-color: palevioletred;
+    }
+
+    .foot{
+        text-align: center;
+    }
+
+    .div{
+        padding-top: 20px;
+    }
+
+    mark {
+  background-color: palevioletred;
+  color: white;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+.login{
+  display: none;
+}
+
+.pinkout{
+        font-weight: bold;
+  border: 2px solid palevioletred;        /* Palevioletred border */
+  border-radius: 8px;                     /* Rounded corners */
+  padding: 16px;
+  margin-bottom: 24px;
+  background: transparent;
+  margin-left: 150px;
+  /* Soft light pink and shiny gray shadow */
+  box-shadow: 
+    0 2px 8px 0 rgba(216, 112, 147, 0.10), /* Light pink shadow */
+    0 4px 16px 0 rgba(200, 200, 200, 0.12); /* Shiny gray shadow */
+}
+
+.para{
+    max-width: 80%;
+    text-align: justify;
+}

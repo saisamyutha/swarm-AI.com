@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom_features.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-" data-bs-theme="dark" style="background-color: palevioletred;">
+        
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i>TechiePosts</i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" aria-current="page" href="Index.html"><div class="hey">Home</div></a>
+         <a class="nav-link" href="Intro.html"><div class="hey">Intro</div></a>
+        <a class="nav-link active" href="Features.html"><div class="hey">Features</div></a>
+        <a class="nav-link" href="Application.html"><div class="hey">Applications</div></a>
+        <a class="nav-link logins" aria-disabled="true"><div class="hey">Log In</div></a>
+      </div>
+      <form id="searchForm" class="d-flex ms-auto" role="search">
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="searchBtn" class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<h1><span class="pink">Key Features </span>Of Swarm Intelligence</h1>
+<div class="subhead"><i>Exploring and understanding SI in Distributed Systems ..</i></div>
+
+<br>
+<p class="pinkout">Swarm AI, inspired by the collective behaviors found in nature—such as ant colonies, bee swarms, and bird flocks—offers a groundbreaking approach to solving complex problems in artificial intelligence. By leveraging simple agents that interact locally, Swarm AI systems achieve remarkable efficiency, adaptability, and resilience. Here are the key features that define Swarm AI:</p>
+       
+<div class="image">
+<img src="FeatureImg/image.png" alt="">
+<img src="FeatureImg/image-removebg-preview (33).png" alt="">
+</div>
+<div class="subheads"> 1. Decentralization </div> 
+<p class="pinkout">Swarm AI operates without a central controller. Each agent acts autonomously, making decisions based on local information and interactions with nearby agents. This decentralized structure allows the system to scale efficiently and adapt to new challenges, as no single point of failure exists and agents can respond quickly to local changes.</p>
+
+<div class="subheads">2. Self-Organization</div>
+<p class="pinkout">Order and structure in Swarm AI emerge naturally from the interactions among agents, without any top-down coordination. Simple rules—such as following, aligning, or avoiding neighbors—lead to complex, coordinated group behaviors. This self-organization enables the system to dynamically form patterns, allocate tasks, and solve problems collectively.</p>
+
+<div class="subheads">3. Emergence</div>
+<p class="pinkout">Swarm AI systems exhibit emergent behavior, where the collective intelligence of the group arises from the simple actions of individual agents. The overall system can solve problems or adapt to environments in ways that individual agents cannot achieve alone. This principle is crucial for tackling complex, real-world challenges.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xODlyNdxuEY?si=CLVqCjE5tgjW04T7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<div class="subheads">4. Robustness</div>
+<p class="pinkout">The decentralized and redundant nature of Swarm AI makes it highly robust and fault-tolerant. If some agents fail or are removed, the system as a whole continues to function effectively. This resilience is essential for applications in unpredictable or dynamic environments.</p>
+
+<div class="subheads">5. Scalability</div>
+<p class="pinkout">Swarm AI systems can easily accommodate more agents without requiring fundamental changes to the system’s design. This scalability allows them to handle increasingly complex tasks simply by adding more agents, making them suitable for large-scale applications.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mPpmHor4NNY?si=umkxOZDlVxJUC8n7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="subheads">6. Adaptability and Flexibility</div>
+<p class="pinkout">Swarm AI is highly adaptable, as agents can quickly adjust their behavior in response to changes in the environment or the task at hand. This flexibility ensures that the system remains effective even under dynamic or uncertain conditions.</p>
+
+<div class="subheads">7. Diversity and Collective Intelligence</div>
+<p class="pinkout">Diversity among agents—differences in strategies, knowledge, or behavior—enhances the adaptability and problem-solving capacity of Swarm AI. By pooling their information and efforts, agents achieve a level of collective intelligence that surpasses the abilities of any single member.</p>
+
+<a href="Index.html" class="card-btn">Back to Home</a>
+
+<div class="div">
+  <footer>
+    <div class="foot">TechiePosts | Hyderabad | India | 500049 </div>
+  </footer>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Store the original HTML content when the page loads
+    const content = document.getElementById('content');
+    const originalHTML = content.innerHTML;
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const searchTerm = document.getElementById('searchInput').value.trim();
+
+      // Reset content to original HTML (removes all highlights)
+      content.innerHTML = originalHTML;
+
+      if (!searchTerm) return;
+
+      // Escape special regex characters in the search term
+      const safeTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(safeTerm, 'gi');
+
+      // Highlight all occurrences of the search term
+      content.innerHTML = content.innerHTML.replace(regex, function(match) {
+        return `<mark>${match}</mark>`;
+      });
+    });
+  </script>
+</body>
+</html>

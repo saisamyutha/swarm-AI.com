@@ -1,0 +1,139 @@
+.navbar-brand{
+    font-family: "Jost", sans-serif;
+    font-weight: bolder;
+    
+}
+
+.hey{
+    padding-left: 138px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar navbar-expand-lg sticky-top bg-primary{
+   background-color: palevioletred !important;
+}
+h1 {
+    text-decoration:wavy;
+    text-decoration-color: palevioletred;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.pink{
+    color: palevioletred;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.subhead{
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+p{
+    max-width: 80%;
+    text-align: justify;
+    padding-left: 18%;
+}
+
+.subheads{
+    text-align: center;
+    font-size: 30px;
+    color: palevioletred;
+}
+
+img{
+    
+    max-width: 80%;
+    padding-left: 100px;
+    margin-left: 74px;
+}
+
+iframe{
+    align-items: center;
+    margin-left: 30%;
+}
+
+footer{
+        background-color: palevioletred;
+    }
+
+    .foot{
+        text-align: center;
+    }
+
+    .div{
+        padding-top: 20px;
+    }
+
+
+    .pinkout{
+        font-weight: bold;
+  border: 2px solid palevioletred;        /* Palevioletred border */
+  border-radius: 8px;                     /* Rounded corners */
+  padding: 16px;
+  margin-bottom: 24px;
+  background: transparent;
+  margin-left: 150px;
+  /* Soft light pink and shiny gray shadow */
+  box-shadow: 
+    0 2px 8px 0 rgba(216, 112, 147, 0.10), /* Light pink shadow */
+    0 4px 16px 0 rgba(200, 200, 200, 0.12); /* Shiny gray shadow */
+}
+
+img{
+    max-width: 40%;
+}
+    .image{
+        display: flex;
+    }
+
+    .imgee{
+        align-items: center;
+        margin-left: 25%;
+        
+    }
+
+    .card-btn {
+        margin-left: 45%;
+  display: inline-block;
+  background: palevioletred;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.12);
+  margin-top: auto;
+}
+
+.card-btn:hover {
+  background: #fff;
+  color: palevioletred;
+}
+
+mark {
+  background-color: palevioletred;
+  color: white;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.logins{
+  display: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Highlight Search Example</title>
+  <style>
+    mark {
+      background-color: palevioletred;
+      color: white;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search">
+    <button id="searchBtn" type="submit">Search</button>
+  </form>
+
+  <div id="content">
+    <p>Swarm AI operates without a central controller. Each agent acts autonomously.</p>
+    <p>Order and structure in Swarm AI emerge naturally from the interactions among agents.</p>
+    <p>Swarm AI systems exhibit emergent behavior.</p>
+  </div>
+
+  <script>
+    // Store the original HTML content when the page loads
+    const content = document.getElementById('content');
+    const originalHTML = content.innerHTML;
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const searchTerm = document.getElementById('searchInput').value.trim();
+
+      // Reset content to original HTML (removes all highlights)
+      content.innerHTML = originalHTML;
+
+      if (!searchTerm) return;
+
+      // Escape special regex characters in the search term
+      const safeTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(safeTerm, 'gi');
+
+      // Highlight all occurrences of the search term
+      content.innerHTML = content.innerHTML.replace(regex, function(match) {
+        return `<mark>${match}</mark>`;
+      });
+    });
+  </script>
+</body>
+</html>
